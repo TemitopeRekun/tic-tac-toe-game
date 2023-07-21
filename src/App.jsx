@@ -58,6 +58,9 @@ function Board() {
 	);
 }
 function Game() {
+	const [xIsNext, setXIsNext] = useState(true);
+	const [history, setHistory] = useState(Array(9).fill(null));
+	const currentSquares = history[History.length - 1];
 	return (
 		<div className="game">
 			<div className="game-board">
