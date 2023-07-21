@@ -1,13 +1,22 @@
-import { useState } from "react";
-import "./App.css";
-
-function App() {
-
+function Square() {
 	return (
 		<>
-			<h1>This is a paragraph</h1>
+			<div className="board-row">
+				<button className="square">X</button>
+				<button className="square">X</button>
+				<button className="square">X</button>
+			</div>
+			<div className="board-row">
+				<button className="square">X</button>
+				<button className="square">X</button>
+				<button className="square">X</button>
+			</div>
+			<div className="board-row">
+				<button className="square">X</button>
+				<button className="square">X</button>
+				<button className="square">X</button>
+			</div>
 		</>
 	);
 }
-
-export default App;
+export default Square;
