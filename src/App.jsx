@@ -10,7 +10,7 @@ function Square({ value, onSquareClick }) {
 
 function Board({ xIsNext, squares, onPlay }) {
 	function handleClick(i) {
-		if (squares[i] || calculateWinner(squares)) {
+		if (calculateWinner(squares) || squares[i]) {
 			return;
 		}
 		const nextSquares = squares.slice();
@@ -56,8 +56,8 @@ function Board({ xIsNext, squares, onPlay }) {
 
 function Game() {
 	const [history, setHistory] = useState([Array(9).fill(null)]);
-	const xIsNext = currentMove % 2 === 0;
 	const [currentMove, setCurrentMove] = useState(0);
+	const xIsNext = currentMove % 2 === 0;
 	const currentSquares = history[currentMove];
 
 	function handlePlay(nextSquares) {
